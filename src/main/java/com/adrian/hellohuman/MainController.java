@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
   
   @RequestMapping("")
-  public String index(@RequestParam(value="q",required=false) String searchQuery){
+  public String index(@RequestParam(value="q",required=false) String searchQuery){ //or we could set another param defaultValue = "human" and not use the if
     if(searchQuery == null) {
       return "Hello human";
     }else {
